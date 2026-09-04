@@ -17,8 +17,8 @@
       --accent-coral: #ff6b4a;
       --accent-cyan: #38bdf8;
       --accent-purple: #c084fc;
-      --wa-color: #22c55e;
-      --ig-color: #f43f5e;
+      --wa-color: #25d366;
+      --ig-color: #e1306c;
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
@@ -34,7 +34,6 @@
       overflow-x: hidden;
     }
 
-    /* Arka Plan Canlı Parıltı Efektleri */
     body::before {
       content: "";
       position: fixed;
@@ -115,7 +114,14 @@
       transition: all 0.25s ease;
       display: inline-flex;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
+    }
+
+    .btn svg {
+      width: 20px;
+      height: 20px;
+      fill: currentColor;
+      flex-shrink: 0;
     }
 
     .btn-github {
@@ -129,27 +135,27 @@
     }
 
     .btn-wp {
-      background: rgba(34, 197, 94, 0.15);
+      background: rgba(37, 211, 102, 0.15);
       color: #4ade80;
-      border: 1px solid rgba(34, 197, 94, 0.4);
+      border: 1px solid rgba(37, 211, 102, 0.4);
     }
     .btn-wp:hover {
       background: var(--wa-color);
       color: #fff;
       transform: translateY(-3px) scale(1.02);
-      box-shadow: 0 8px 22px rgba(34, 197, 94, 0.4);
+      box-shadow: 0 8px 22px rgba(37, 211, 102, 0.4);
     }
 
     .btn-ig {
-      background: rgba(244, 63, 94, 0.15);
+      background: rgba(225, 48, 108, 0.15);
       color: #fb7185;
-      border: 1px solid rgba(244, 63, 94, 0.4);
+      border: 1px solid rgba(225, 48, 108, 0.4);
     }
     .btn-ig:hover {
-      background: var(--ig-color);
+      background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
       color: #fff;
       transform: translateY(-3px) scale(1.02);
-      box-shadow: 0 8px 22px rgba(244, 63, 94, 0.4);
+      box-shadow: 0 8px 22px rgba(225, 48, 108, 0.4);
     }
 
     section { margin-bottom: 48px; }
@@ -183,7 +189,6 @@
       color: #fff;
     }
 
-    /* Görselli Canlı Kart Mimarisi */
     .card {
       display: block;
       text-decoration: none;
@@ -268,7 +273,6 @@
     }
     .card:hover .project-cta { gap: 10px; }
 
-    /* Arel Kartı */
     .card-arel .card-meta {
       color: var(--accent-purple);
       background: rgba(192, 132, 252, 0.1);
@@ -292,9 +296,29 @@
       <p class="subtitle">İstanbul Arel Üniversitesi Bilgisayar Mühendisliği öğrencisiyim. Backend servisleri, RESTful Web API mimarileri, veri tabanı modelleme ve algoritmik çözümler üzerine projeler geliştiriyorum.</p>
       
       <div class="links">
-        <a href="https://github.com/sahin4699" target="_blank" class="btn btn-github">GitHub Profilim</a>
-        <a href="https://wa.me/905xxxxxxxxx" target="_blank" class="btn btn-wp">WhatsApp</a>
-        <a href="https://instagram.com/kullanici_adin" target="_blank" class="btn btn-ig">Instagram</a>
+        <!-- GitHub Butonu -->
+        <a href="https://github.com/sahin4699" target="_blank" class="btn btn-github">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+          </svg>
+          GitHub Profilim
+        </a>
+
+        <!-- WhatsApp Butonu -->
+        <a href="https://wa.me/905425762507" target="_blank" class="btn btn-wp">
+          <svg viewBox="0 0 24 24">
+            <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 01-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 012.41 5.83c.01 4.54-3.69 8.23-8.22 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.44.06-.66.31-.23.25-.88.86-.88 2.09 0 1.23.9 2.42 1.02 2.59.12.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.44.53.61.19 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.07-.1-.23-.17-.48-.29z"/>
+          </svg>
+          WhatsApp
+        </a>
+
+        <!-- Instagram Butonu -->
+        <a href="https://instagram.com/__sahinkara__" target="_blank" class="btn btn-ig">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+          </svg>
+          Instagram
+        </a>
       </div>
     </header>
 
