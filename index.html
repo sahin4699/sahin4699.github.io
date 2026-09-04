@@ -151,8 +151,10 @@
       background: rgba(255, 107, 53, 0.08);
     }
 
-    /* Hareketli ve Parlayan Kartlar */
+    /* Tıklanabilir Kart Yapısı */
     .card {
+      display: block;
+      text-decoration: none;
       background: var(--card-bg);
       border: 1px solid var(--card-border);
       border-radius: 14px;
@@ -161,6 +163,7 @@
       position: relative;
       overflow: hidden;
       transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      color: inherit;
     }
 
     .card::before {
@@ -178,7 +181,7 @@
     .card:hover {
       transform: translateY(-4px);
       border-color: rgba(255, 107, 53, 0.4);
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35), 0 0 20px rgba(255, 107, 53, 0.1);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35), 0 0 20px rgba(255, 107, 53, 0.15);
       background: rgba(255, 255, 255, 0.05);
     }
 
@@ -194,7 +197,7 @@
     }
     .card-teknofest:hover {
       border-color: rgba(56, 189, 248, 0.5);
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35), 0 0 25px rgba(56, 189, 248, 0.15);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35), 0 0 25px rgba(56, 189, 248, 0.2);
     }
 
     .card-header {
@@ -229,17 +232,29 @@
       line-height: 1.6;
     }
 
-    .project-link {
+    .project-cta {
       color: var(--accent);
-      text-decoration: none;
       font-weight: 700;
       font-size: 0.9rem;
       display: inline-flex;
       align-items: center;
-      gap: 4px;
+      gap: 6px;
       transition: gap 0.2s ease;
     }
-    .project-link:hover { gap: 8px; }
+    .card:hover .project-cta { gap: 10px; }
+    .card-teknofest .project-cta { color: var(--teknofest-color); }
+
+    /* Statik Eğitim Kartı */
+    .card-static {
+      cursor: default;
+    }
+    .card-static:hover {
+      transform: none;
+      border-color: var(--card-border);
+      box-shadow: none;
+      background: var(--card-bg);
+    }
+    .card-static::before { display: none; }
 
     footer {
       text-align: center;
@@ -281,41 +296,43 @@
     <section>
       <h2>🚀 Projeler & Yarışmalar</h2>
 
-      <!-- TEKNOFEST KARTI -->
-      <div class="card card-teknofest">
+      <!-- TEKNOFEST KARTI (Tıklanabilir) -->
+      <a href="https://www.teknofest.org" target="_blank" class="card card-teknofest">
         <div class="card-header">
           <span class="card-title">🛸 TEKNOFEST - Sağlıkta Yapay Zekâ Yarışması</span>
           <span class="card-meta">Yapay Zekâ • Veri Analizi</span>
         </div>
-        <p class="card-desc">Sağlık verileri ve görüntüleme teknikleri üzerine medikal karar destek sistemleri geliştirdiğimiz, takım çalışması ve ileri seviye veri işleme modelleri barındıran yarışma projemiz.</p>
-      </div>
+        <p class="card-desc">Sağlık verileri ve medikal karar destek sistemleri geliştirdiğimiz, takım çalışması ve ileri seviye makine öğrenmesi modelleri barındıran yarışma projemiz.</p>
+        <span class="project-cta">Detayları İncele →</span>
+      </a>
 
-      <!-- IRONTRACK KARTI -->
-      <div class="card">
+      <!-- IRONTRACK KARTI (Tıklanabilir) -->
+      <a href="https://github.com/sahin4699/IronTrack" target="_blank" class="card">
         <div class="card-header">
           <span class="card-title">🏋️ IronTrack - Workout Tracker Web API</span>
           <span class="card-meta">C# • .NET • SQLite • HTML5</span>
         </div>
         <p class="card-desc">Ağırlık antrenmanı setlerini, egzersiz kayıtlarını ve kişisel rekorları (PR) takip etmek amacıyla geliştirilmiş RESTful mimarili servis. Entity Framework Core ve yerel SQLite entegrasyonu barındırır.</p>
-        <a href="https://github.com/sahin4699/IronTrack" target="_blank" class="project-link">GitHub'da İncele →</a>
-      </div>
+        <span class="project-cta">GitHub Reposuna Git →</span>
+      </a>
 
-      <!-- ENVANTER SİSTEMİ KARTI -->
-      <div class="card">
+      <!-- ENVANTER SİSTEMİ KARTI (Tıklanabilir) -->
+      <a href="https://github.com/sahin4699" target="_blank" class="card">
         <div class="card-header">
           <span class="card-title">📦 Envanter Yönetim Sistemi (Inventory Management)</span>
           <span class="card-meta">Java • OOP • JUnit • REST API</span>
         </div>
         <p class="card-desc">Nesne yönelimli programlama prensipleriyle (OOP) kurgulanan; ürün, kategori ve dinamik stok hareketlerini yöneten modüler backend sistemi.</p>
-      </div>
+        <span class="project-cta">Projeyi Görüntüle →</span>
+      </a>
     </section>
 
     <section>
       <h2>🎓 Eğitim</h2>
-      <div class="card">
+      <div class="card card-static">
         <div class="card-header">
           <span class="card-title">İstanbul Arel Üniversitesi</span>
-          <span class="card-meta">2023 - Devam</span>
+          <span class="card-meta">2024 - Devam</span>
         </div>
         <p class="card-desc">Mühendislik Fakültesi - Bilgisayar Mühendisliği (Lisans - 3. Sınıf)</p>
       </div>
