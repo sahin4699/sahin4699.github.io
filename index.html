@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Şahin Kara | Yazılım Mühendisliği & Portföy</title>
+  <title>Şahin Kara | Bilgisayar Mühendisliği & Portföy</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
@@ -16,6 +16,8 @@
       --text-muted: #94a3b8;
       --accent: #ff6b35;
       --accent-glow: rgba(255, 107, 53, 0.25);
+      --wa-color: #25d366;
+      --ig-color: #e1306c;
     }
     * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
     body { background-color: var(--bg); color: var(--text-main); line-height: 1.6; padding: 40px 20px; }
@@ -25,12 +27,17 @@
     .tag { display: inline-block; padding: 4px 12px; background: var(--accent-glow); color: var(--accent); border-radius: 999px; font-size: 0.85rem; font-weight: 600; margin-bottom: 16px; border: 1px solid var(--accent); }
     h1 { font-size: 2.6rem; font-weight: 800; letter-spacing: -0.03em; margin-bottom: 8px; }
     .subtitle { color: var(--text-muted); font-size: 1.15rem; margin-bottom: 20px; }
-    .links { display: flex; gap: 14px; flex-wrap: wrap; }
+    .links { display: flex; gap: 12px; flex-wrap: wrap; }
     .btn { text-decoration: none; padding: 10px 18px; border-radius: 8px; font-size: 0.9rem; font-weight: 600; transition: all 0.2s ease; display: inline-flex; align-items: center; gap: 8px; }
-    .btn-primary { background: var(--accent); color: #fff; }
-    .btn-primary:hover { opacity: 0.9; transform: translateY(-2px); }
-    .btn-secondary { background: var(--card-bg); color: var(--text-main); border: 1px solid var(--card-border); }
-    .btn-secondary:hover { background: rgba(255,255,255,0.08); transform: translateY(-2px); }
+    
+    .btn-github { background: var(--accent); color: #fff; }
+    .btn-github:hover { opacity: 0.9; transform: translateY(-2px); }
+    
+    .btn-wp { background: rgba(37, 211, 102, 0.1); color: var(--wa-color); border: 1px solid rgba(37, 211, 102, 0.3); }
+    .btn-wp:hover { background: var(--wa-color); color: #fff; transform: translateY(-2px); }
+    
+    .btn-ig { background: rgba(225, 48, 108, 0.1); color: var(--ig-color); border: 1px solid rgba(225, 48, 108, 0.3); }
+    .btn-ig:hover { background: var(--ig-color); color: #fff; transform: translateY(-2px); }
 
     section { margin-bottom: 44px; }
     h2 { font-size: 1.4rem; font-weight: 700; margin-bottom: 18px; border-bottom: 1px solid var(--card-border); padding-bottom: 8px; }
@@ -53,12 +60,13 @@
 <body>
   <div class="container">
     <header>
-      <span class="tag">Yazılım Mühendisliği Öğrencisi</span>
+      <span class="tag">Bilgisayar Mühendisliği 3. Sınıf</span>
       <h1>Şahin Kara</h1>
-      <p class="subtitle">İstanbul Arel Üniversitesi'nde Yazılım Mühendisliği lisans öğrencisiyim. Backend sistemleri, RESTful Web API geliştirme, nesne yönelimli mimariler ve veri yapıları odaklı projeler geliştiriyorum.</p>
+      <p class="subtitle">İstanbul Arel Üniversitesi Bilgisayar Mühendisliği 3. sınıf öğrencisiyim. Backend mimarileri, RESTful Web API servisleri, nesne yönelimli programlama ve veri yapıları üzerine projeler geliştiriyorum.</p>
       <div class="links">
-        <a href="https://github.com/sahin4699" target="_blank" class="btn btn-primary">GitHub Profilim</a>
-        <a href="mailto:ornek@mail.com" class="btn btn-secondary">İletişime Geç</a>
+        <a href="https://github.com/sahin4699" target="_blank" class="btn btn-github">GitHub Profilim</a>
+        <a href="https://wa.me/905xxxxxxxxx" target="_blank" class="btn btn-wp">WhatsApp'tan Yaz</a>
+        <a href="https://instagram.com/kullanici_adin" target="_blank" class="btn btn-ig">Instagram</a>
       </div>
     </header>
 
@@ -71,7 +79,7 @@
         <span class="skill-pill">Entity Framework Core</span>
         <span class="skill-pill">SQLite & SQL</span>
         <span class="skill-pill">RESTful API Tasarımı</span>
-        <span class="skill-pill">Data Structures & Algorithms</span>
+        <span class="skill-pill">Veri Yapıları & Algoritmalar</span>
         <span class="skill-pill">Git & GitHub</span>
       </div>
     </section>
@@ -84,7 +92,7 @@
           <span class="card-title">🏋️ IronTrack - Workout Tracker Web API</span>
           <span class="card-meta">C# • .NET • SQLite • HTML5</span>
         </div>
-        <p class="card-desc">Ağırlık antrenmanı setlerini, egzersiz kayıtlarını ve kişisel rekorları (PR) takip etmek için geliştirilmiş RESTful mimarili servis. Entity Framework Core ve yerel SQLite entegrasyonu barındırır.</p>
+        <p class="card-desc">Ağırlık antrenmanı setlerini, egzersiz kayıtlarını ve kişisel rekorları (PR) takip etmek için geliştirilmiş RESTful Web API servisi. Entity Framework Core ve yerel SQLite entegrasyonu barındırır.</p>
         <a href="https://github.com/sahin4699/IronTrack" target="_blank" class="project-link">GitHub'da İncele →</a>
       </div>
 
@@ -93,7 +101,7 @@
           <span class="card-title">📦 Envanter Yönetim Sistemi (Inventory Management)</span>
           <span class="card-meta">Java • OOP • JUnit • REST API</span>
         </div>
-        <p class="card-desc">Nesne yönelimli programlama prensipleriyle (OOP) kurgulanan; ürün, kategori ve stok hareketlerini dinamik yöneten modüler backend sistemi.</p>
+        <p class="card-desc">Nesne yönelimli programlama prensipleriyle kurgulanan; ürün, kategori ve stok hareketlerini dinamik yöneten modüler backend sistemi.</p>
         <a href="https://github.com/sahin4699" target="_blank" class="project-link">Detayları Gör →</a>
       </div>
     </section>
@@ -103,9 +111,9 @@
       <div class="card">
         <div class="card-header">
           <span class="card-title">İstanbul Arel Üniversitesi</span>
-          <span class="card-meta">Lisans</span>
+          <span class="card-meta">2023 - Günümüz</span>
         </div>
-        <p class="card-desc">Yazılım Mühendisliği Bölümü</p>
+        <p class="card-desc">Bilgisayar Mühendisliği (Lisans - 3. Sınıf)</p>
       </div>
     </section>
 
